@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
 export const Statistics = ({
-  good = 0,
-  neutral = 0,
-  bad = 0,
-  total = 0,
-  positivePercentage = 0,
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
 }) => {
   return (
     <ul>
@@ -31,9 +31,9 @@ export const Statistics = ({
 };
 
 Statistics.prototype = {
-  good: PropTypes.number,
+   good: PropTypes.number,
   neutral: PropTypes.number,
   bad: PropTypes.number,
   total: PropTypes.number,
-  positive: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  positivePercentage: PropTypes.number,
 };
